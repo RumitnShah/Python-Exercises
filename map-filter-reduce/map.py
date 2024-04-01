@@ -1,3 +1,5 @@
+import math
+
 # Problem 1
 # We double all numbers using map()
 
@@ -52,4 +54,62 @@ def even_numbers(number):
 numbers = (1,2,3,4,5,6,7,8,9)
 
 result = list(map(even_numbers,numbers))
+print(result)
+
+
+# Problem 6
+# Squaring each number in a list
+
+list1 = [1,2,3,4,5,6,7]
+
+result = list(map(lambda x:x**2, list1))
+print(result)
+
+
+# Problem 7
+# Converting strings to integers
+
+list1 = ["1","2","3","4","5","6","7"]
+
+result = list(map(int, list1))
+print(result)
+
+
+# Problem 7
+# Calculating the area of circles with different radii
+
+def area(radii):
+    area_of_circle = math.pi * (radii ** 2)
+    return area_of_circle
+
+radii = (3,6,1,2,4,5)
+result = list(map(area,radii))
+print(result)
+
+
+# Problem 8
+# Using "pow" math function
+
+list1 = [1,2,3,4]
+list2 = [5,6,7]
+
+result = list(map(math.pow, list1,list2))
+print(result)
+
+
+# Problem 9 ##
+# Using Dictionary with Map(), adding an '_' to the end of each value
+
+car_dict ={'a': 'Mercedes-Benz', 'b': 'BMW', 'c': 'Ferrari', 'd': 'Lamborghini', 'e': 'Jeep'}
+
+result_dict = dict(map(lambda x:(x[0],x[1]+"_"), car_dict))
+print(result_dict)
+
+
+# Problem 10
+# To find length of the given string elements
+
+list1 = ["apple", "honey", "chocolate", "butter"]
+
+result = list(map(len, list1))
 print(result)
