@@ -75,7 +75,7 @@ result = list(map(int, list1))
 print(result)
 
 
-# Problem 7
+# Problem 8
 # Calculating the area of circles with different radii
 
 def area(radii):
@@ -87,7 +87,7 @@ result = list(map(area,radii))
 print(result)
 
 
-# Problem 8
+# Problem 9
 # Using "pow" math function
 
 list1 = [1,2,3,4]
@@ -97,7 +97,7 @@ result = list(map(math.pow, list1,list2))
 print(result)
 
 
-# Problem 9 ##
+# Problem 10 ##
 # Using Dictionary with Map(), adding an '_' to the end of each value
 
 car_dict ={'a': 'Mercedes-Benz', 'b': 'BMW', 'c': 'Ferrari', 'd': 'Lamborghini', 'e': 'Jeep'}
@@ -106,10 +106,27 @@ result_dict = dict(map(lambda x:(x[0],x[1]+"_"), car_dict))
 print(result_dict)
 
 
-# Problem 10
+# Problem 11
 # To find length of the given string elements
 
 list1 = ["apple", "honey", "chocolate", "butter"]
 
 result = list(map(len, list1))
 print(result)
+
+
+# Problem 12
+# To square and cube a number simultaneously
+
+def square(number):
+    return number ** 2
+
+def cube(number):
+    return number ** 3
+
+numbers = [1,3,5,7,2,4,6,8]
+func = [square,cube]
+
+for number in numbers:
+    result = list(map(lambda x:x(number),func))
+    print(result)
