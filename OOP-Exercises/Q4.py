@@ -10,7 +10,7 @@ class Vehicle:
 class Bus(Vehicle):
 
     def seating_capacity(self,capacity=50):
-        return super().seating_capacity(capacity=50)
+        return super().seating_capacity(capacity)
     
 school_bus = Bus("The Yellow bus", 180, 12)
 
