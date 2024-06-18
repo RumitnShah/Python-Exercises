@@ -13,7 +13,7 @@ class VehicleEncoder(JSONEncoder):
         def default(self, o):
             return o.__dict__
 
-print("Encode Vehicle Object into JSON")
+print("Encoding Vehicle Object into JSON")
 vehicleJson = json.dumps(vehicle, indent=4, cls=VehicleEncoder)
 
 print(vehicleJson)
